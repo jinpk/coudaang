@@ -18,7 +18,3 @@ plugins:
     opt:
       - allow_merge=true
       - merge_file_name=openapiv2
-  - plugin: gorm
-    out: ../gen
-    opt:
-      - paths=source_relative,engine=postgres,enums=string,gateway=true

@@ -7,6 +7,9 @@ import (
 	"net"
 	"net/http"
 
+	"gorm.io/driver/postgres"
+	"gorm.io/gorm"
+
 	"github.com/coudaang/coudaang/docs"
 	authv1 "github.com/coudaang/coudaang/packages/api/auth/v1"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
@@ -24,6 +27,12 @@ func do() error {
 	ctx := context.Background()
 	ctx, cancel := context.WithCancel(ctx)
 	defer cancel()
+
+	dsn := "host=localhost user=jinpk password=asdf1234 dbname=coudaang port=5432 sslmode=disable"
+	_, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
+	if err != nil {
+		return err
+	}
 
 	grpcServer := grpc.NewServer()
 
