@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package coudaang.auth.v1;
+
+option go_package = "github.com/coudaang/coudaang/packages/api/auth/v1;authv1";
+
+import "google/protobuf/wrappers.proto";
+import "google/api/annotations.proto";
+
+service AuthAPI {
+  rpc AuthKakao(AuthKakaoRequest) returns (AuthKakaoResponse) {
+    option (google.api.http) = {
+      get: "/v1/auth/kakao"
+    };
+};
+}
+
+message AuthKakaoRequest {
+  google.protobuf.StringValue code = 1;
+  google.protobuf.StringValue state = 2;
+  google.protobuf.StringValue error = 3;
+  google.protobuf.StringValue error_description = 4;
+}
+
+message AuthKakaoResponse {}

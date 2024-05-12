@@ -1,0 +1,24 @@
+version: v1
+plugins:
+  - plugin: buf.build/protocolbuffers/go
+    out: ../gen
+    opt: 
+      - paths=source_relative
+  - plugin: go-grpc
+    out: ../gen
+    opt: 
+      - paths=source_relative
+  - plugin: grpc-gateway
+    out: ../gen
+    opt:
+      - paths=source_relative
+  - name: openapiv2
+    out: ../gen
+    strategy: all
+    opt:
+      - allow_merge=true
+      - merge_file_name=openapiv2
+  - plugin: gorm
+    out: ../gen
+    opt:
+      - paths=source_relative,engine=postgres,enums=string,gateway=true

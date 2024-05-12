@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package coudaang.user.v1;
+
+option go_package = "github.com/coudaang/coudaang/packages/api/user/v1;userv1";
+
+import "google/protobuf/timestamp.proto";
+import "gorm/options/gorm.proto";
+
+message User {
+  option (gorm.opts) = {
+    ormable: true,
+  };
+
+  uint64 id = 1;
+  string nickname = 2;
+  string kakao_id = 3;
+  string profile_picture_url = 4;
+  
+  google.protobuf.Timestamp created_at = 5;
+}
