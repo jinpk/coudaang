@@ -1,4 +1,4 @@
-module github.com/coudaang/coudaang
+module github.com/coudaang/coudaang/api
 
 go 1.21.6
 

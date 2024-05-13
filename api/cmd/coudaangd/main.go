@@ -10,8 +10,8 @@ import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 
-	"github.com/coudaang/coudaang/docs"
-	authv1 "github.com/coudaang/coudaang/packages/api/auth/v1"
+	authv1 "github.com/coudaang/coudaang/api/auth/v1"
+	"github.com/coudaang/coudaang/api/docs"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
