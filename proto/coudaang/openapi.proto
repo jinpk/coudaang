@@ -4,7 +4,7 @@ package coudaang.openapi;
 
 import "protoc-gen-openapiv2/options/annotations.proto";
 
-option go_package = "github.com/coudaang/coudaang/api";
+option go_package = "github.com/jinpk/coudaang/api";
 
 option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
     info: {

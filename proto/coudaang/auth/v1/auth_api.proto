@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package coudaang.auth.v1;
 
-option go_package = "github.com/coudaang/coudaang/api/auth/v1;authv1";
+option go_package = "github.com/jinpk/coudaang/api/auth/v1;authv1";
 
 import "google/protobuf/wrappers.proto";
 import "google/api/annotations.proto";

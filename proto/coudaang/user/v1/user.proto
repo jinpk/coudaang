@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package coudaang.user.v1;
 
-option go_package = "github.com/coudaang/coudaang/api/user/v1;userv1";
+option go_package = "github.com/jinpk/coudaang/api/user/v1;userv1";
 
 import "google/protobuf/timestamp.proto";
 
